@@ -1,0 +1,13 @@
+{
+  "name": "DawidMazurek/CleanArchitectureDemo",
+  "homepage": "https://github.com/DawidMazurek/clean-architecture-demo-php7",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "DawidMazurek\\CleanArchitectureDemo\\": ["./src/"]
+    }
+  },
+  "require": {
+    "ramsey/uuid": "3.4.*"
+  }
+}
