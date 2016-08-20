@@ -55,13 +55,13 @@ class PaymentsRepository
      */
     public function findById(PaymentId $paymentId): Payment
     {
-        $packetData = $this->gateway->findById($paymentId->getId());
-        if (count($packetData) === 0) {
+        $paymentData = $this->gateway->findById($paymentId->getId());
+        if (count($paymentData) === 0) {
             throw new PaymentNotFoundException('Payment not found exception. (' .$paymentId->getId() . ')');
         }
         return $this->hydrator->hydrate(
             $this->factory->create(),
-            $packetData
+            $paymentData
         );
     }
 
