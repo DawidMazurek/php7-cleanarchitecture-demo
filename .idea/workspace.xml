@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cb92631-94b8-409d-84d6-6f00b3c3588e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/atlassian-ide-plugin.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/composerJson.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/untitled.iml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
@@ -483,7 +475,7 @@
       <updated>1471634973875</updated>
       <workItem from="1471634976566" duration="5110000" />
       <workItem from="1475128576633" duration="2136000" />
-      <workItem from="1475342160418" duration="1174000" />
+      <workItem from="1475342160418" duration="1229000" />
     </task>
     <task id="LOCAL-00001" summary="Removed unnecessary files">
       <created>1475129409518</created>
@@ -513,11 +505,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475344444963</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="removed .idea">
+      <created>1475344627529</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1475344627529</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8420000" />
+    <option name="totallyTimeSpent" value="8475000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -559,7 +558,8 @@
     <MESSAGE value="removed vendors from repository" />
     <MESSAGE value="removed composer lock, added gitignore" />
     <MESSAGE value="added money valueobject dependency and new usecases wrappers in facade and service" />
-    <option name="LAST_COMMIT_MESSAGE" value="added money valueobject dependency and new usecases wrappers in facade and service" />
+    <MESSAGE value="removed .idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed .idea" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
