@@ -20,9 +20,13 @@ class PaymentsDummyApiGateway implements PaymentsGatewayInterface
         return [
             [
                 PaymentFields::PAYMENT_ID => '123e4567-e89b-12d3-a456-426655440000',
+                PaymentFields::PRICE_VALUE => 100,
+                PaymentFields::PRICE_CURRENCY => 'EUR',
             ],
             [
                 PaymentFields::PAYMENT_ID => '123e4567-e89b-12d3-a456-426655440001',
+                PaymentFields::PRICE_VALUE => 25,
+                PaymentFields::PRICE_CURRENCY => 'USD',
             ]
         ];
     }
@@ -35,6 +39,8 @@ class PaymentsDummyApiGateway implements PaymentsGatewayInterface
     {
         return [
             PaymentFields::PAYMENT_ID => $paymentId,
+            PaymentFields::PRICE_VALUE => 25,
+            PaymentFields::PRICE_CURRENCY => 'USD',
         ];
     }
 

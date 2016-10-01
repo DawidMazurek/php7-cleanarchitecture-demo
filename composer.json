@@ -8,6 +8,7 @@
     }
   },
   "require": {
-    "ramsey/uuid": "3.4.*"
+    "ramsey/uuid": "3.4.*",
+    "mathiasverraes/money": "^1.3"
   }
 }
