@@ -8,23 +8,29 @@ use DawidMazurek\CleanArchitectureDemo\payments\command\RegisterPayment;
 use DawidMazurek\CleanArchitectureDemo\payments\factory\PaymentsFactory;
 use DawidMazurek\CleanArchitectureDemo\payments\gateway\PaymentsDummyApiGateway;
 use DawidMazurek\CleanArchitectureDemo\payments\hydrator\DefaultPaymentHydrator;
+use DawidMazurek\CleanArchitectureDemo\payments\mapping\PaymentFields;
 use DawidMazurek\CleanArchitectureDemo\payments\repository\PaymentsRepository;
-use DawidMazurek\CleanArchitectureDemo\valueobjects\PaymentId;
 use Ramsey\Uuid\UuidFactory;
 
 $paymentFactory = new PaymentsFactory();
+$paymentHydrator = new DefaultPaymentHydrator();
 $payment = $paymentFactory->create();
 $uuidFactory = new UuidFactory();
-$payment->setPaymentId(
-    new PaymentId(
-        $uuidFactory->uuid4()->toString()
-    ));
+
+$paymentData =[
+    PaymentFields::PAYMENT_ID => $uuidFactory->uuid4()->toString(),
+    PaymentFields::PRICE_VALUE => 10,
+    PaymentFields::PRICE_CURRENCY => 'PLN',
+];
 
 (new RegisterPayment(
     new PaymentsRepository(
         new PaymentsDummyApiGateway(),
-        new DefaultPaymentHydrator(new UuidFactory()),
+        $paymentHydrator,
         $paymentFactory
     ),
-    $payment
+    $paymentHydrator->hydrate(
+        $payment,
+        $paymentData
+    )
 ))->execute();

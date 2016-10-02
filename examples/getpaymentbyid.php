@@ -12,14 +12,13 @@ use DawidMazurek\CleanArchitectureDemo\payments\repository\PaymentsRepository;
 use DawidMazurek\CleanArchitectureDemo\valueobjects\PaymentId;
 use Ramsey\Uuid\UuidFactory;
 
-$paymentFactory = new PaymentsFactory();
 $idToSeek = (new UuidFactory())->uuid4()->toString();
 
 $payment = (new GetPaymentById(
     new PaymentsRepository(
         new PaymentsDummyApiGateway(),
         new DefaultPaymentHydrator(),
-        $paymentFactory
+        new PaymentsFactory()
     ),
     new PaymentId($idToSeek)
 ))->execute();

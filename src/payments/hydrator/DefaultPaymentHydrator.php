@@ -23,8 +23,11 @@ class DefaultPaymentHydrator implements PaymentHydratorInterface
      */
     public function extract(Payment $payment): array
     {
+        $price = $payment->getPrice();
         return [
             PaymentFields::PAYMENT_ID => $payment->getPaymentId()->getId(),
+            PaymentFields::PRICE_VALUE => $price->getAmount(),
+            PaymentFields::PRICE_CURRENCY => $price->getCurrency()->getName(),
         ];
     }
 
